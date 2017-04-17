@@ -55,3 +55,26 @@ $ sudo gem install nokogiri -v '1.7.1'
 ```
 $ bundle install
 ```
+## session1
+ install nodejs
+  - install nvm
+
+ ```
+ $ curl -o- https://raw.githubusercontent.com/creationix/nvm/v0.33.1/install.sh | bash
+
+ ```
+ -  The script clones the nvm repository to ~/.nvm and adds the source line to your profile (~/.bash_profile, ~/.zshrc, ~/.profile, or ~/.bashrc).
+
+```
+export NVM_DIR="$HOME/.nvm"
+[ -s "$NVM_DIR/nvm.sh" ] && . "$NVM_DIR/nvm.sh" # This loads nvm
+```
+- source your (~/.bash_profile, ~/.zshrc, ~/.profile, or ~/.bashrc) file
+
+```
+$ source ~/.bashrc
+```
+## install geckodriver
+```
+$ npm install geckodriver
+```
