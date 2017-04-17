@@ -34,3 +34,24 @@ gem 'capybara'
 ```
 $ bundle install
 ```
+if you met some issue like below
+```
+Errno::EACCES: Permission denied @ rb_sysopen - /Users/lqi/.rbenv/versions/2.3.0/lib/ruby/gems/2.3.0/gems/nokogiri-1.7.1/.autotest
+Using rack-test 0.6.3
+Using childprocess 0.6.3
+An error occurred while installing nokogiri (1.7.1), and Bundler cannot continue.
+Make sure that `gem install nokogiri -v '1.7.1'` succeeds before bundling.
+```
+- first install xcode-select
+```
+$ xcode-select --install
+```
+
+- second install nokogiri
+```
+$ sudo gem install nokogiri -v '1.7.1'
+```
+- third run bundle install again
+```
+$ bundle install
+```
