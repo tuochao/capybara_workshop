@@ -55,3 +55,21 @@ $ sudo gem install nokogiri -v '1.7.1'
 ```
 $ bundle install
 ```
+## webdriver configuration
+### install chromedriver global
+
+```
+$ brew install chromedriver
+```
+Then command `chromedriver` should open chromedriver.
+
+I also update a local chromedriver into this repo, you can use this directly, but it needs to configure driver path in spec_helper file, like this:
+```
+chromedriver_path = File.join(File.absolute_path('../', File.dirname(__FILE__)),"chromedriver")
+Selenium::WebDriver::Chrome.driver_path = chromedriver_path
+```
+### install phantomjs
+```
+$ brew install phantomjs
+```
+Then command `phantomjs` should open phantomjs console.
