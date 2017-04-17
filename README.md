@@ -74,6 +74,12 @@ export NVM_DIR="$HOME/.nvm"
 ```
 $ source ~/.bashrc
 ```
+- nvm
+```
+nvm  ls-remote
+nvm install v6.0.0
+nvm use v6.0.0
+```
 ## install geckodriver
 ```
 $ npm install geckodriver
