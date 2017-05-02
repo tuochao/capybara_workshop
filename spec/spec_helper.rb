@@ -1,55 +1,3 @@
-# capybara_workshop session2
-
-## install chromedriver--first way
-
-### install chromedriver global
-
-```
-$ brew install chromedriver
-```
-Then command `chromedriver` should open chromedriver.
-I also update a local chromedriver into this repo, you can use this directly, but it needs to configure driver path in spec_helper file, like this:
-
-```
-chromedriver_path = File.join(File.absolute_path('../', File.dirname(__FILE__)),"chromedriver")
-Selenium::WebDriver::Chrome.driver_path = chromedriver_path
-```
-###  install chromedriver--second way
-
-Gemfile
-
-```
-gem "chromedriver-helper"
-```
-then, in your specs:
-```
-Capybara.register_driver :selenium do |app|
-  Capybara::Selenium::Driver.new(app, :browser => :chrome)
-end
-```
-
-## install rspec
-gemfile
-
-```
-gem "rspec"
-```
-then bundle again
-
-```
-bundle install
-```
-init your rspec env
-
-```
-rspec --init
-
-```
-you will see the .rspec file and spec menu created
-
-### edit your spec_helper.rb file
-
-```
 require "capybara/rspec"
 require "capybara"
 require "rspec"
@@ -159,9 +107,3 @@ RSpec.configure do |config|
   Kernel.srand config.seed
 =end
 end
-
-```
-run test
-```
-rspec
-```
