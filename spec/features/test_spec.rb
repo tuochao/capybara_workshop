@@ -5,10 +5,10 @@ describe "google.co.uk",  :type => :feature do
     before do
       page.driver.browser.manage.window.resize_to(1440,900) #Mention it here
       visit "/"
-
     end
 
     it "contains a search button" do
+      expect(page.has_button?('Google Search')).to be_truthy
       expect(page).to have_button "Google Search"
     end
 
@@ -17,7 +17,7 @@ describe "google.co.uk",  :type => :feature do
     end
 
     it "has a search box" do
-      expect(page).to have_field('q', :type => 'text')
+      expect(page).to have_field('lst-ib', :type => 'text')
     end
 
   end
@@ -29,6 +29,8 @@ describe "google.co.uk",  :type => :feature do
 
       # no button to click now that google auto-starts the search
       # click_button "Google Search"
+      # click_button '_fZl'
+      click_button('Search')
     end
 
     it "should return search results" do
@@ -36,7 +38,7 @@ describe "google.co.uk",  :type => :feature do
     end
 
     it "should list the pixielabs twitter page" do
-      expect(page).to have_text "Pixie Labs (pixielabs) on Twitter"
+      expect(page).to have_text "Pixie Labs (@pixielabs) | Twitter"
     end
 
   end
