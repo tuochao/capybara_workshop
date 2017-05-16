@@ -1,4 +1,4 @@
-.idea/
+.idea
 .rbenv-gemsets
 chromdriver
 .rspec
